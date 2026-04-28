@@ -55,6 +55,7 @@ export const authOtion: NextAuthOptions = {
         param.token.routToken = param.user.accessToken;
         param.token.id = param.user.id;
         // console.log("jwtParam", param);
+        // console.log("jwtParam", param);
       }
       return param.token;
     },
@@ -62,6 +63,7 @@ export const authOtion: NextAuthOptions = {
       // when route to host//api/auth/session
 
       session.id = token.id;
+      // console.log("sessionParam", session);
       // console.log("sessionParam", session);
       return session;
     },

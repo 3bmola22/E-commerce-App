@@ -46,7 +46,11 @@ export default function wishlist() {
 
     setallProductsWish(data?.data.products);
     setallWish(data);
+<<<<<<< HEAD
     // console.log("trrr", data);
+=======
+    console.log("trrr", data);
+>>>>>>> 6f3db45a7a0c2616bd18c1051008cf980400cbc6
     if (data?.status === "success") {
       toast.success("Product cleared successfully!", {
         position: "top-center",

@@ -12,6 +12,7 @@ export default function DeleteProduct({ id, count, setallProducts, setallCart ,c
     setallProducts(data?.data.products || null);
     setallCart(data);
     // console.log("trrr", data);
+    // console.log("trrr", data);
     if (data?.status === "success") {
       toast.success("Product cleared successfully!", {
         position: "top-center",

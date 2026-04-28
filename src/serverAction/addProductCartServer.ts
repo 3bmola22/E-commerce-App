@@ -18,7 +18,7 @@ export async function addProductCartServer(productId: string) {
       headers: { "Content-Type": "application/json", token: token as string },
     });
     const data = await res.json();
-console.log("yyyyyyyyy", data);
+// console.log("yyyyyyyyy", data);
     return data;
   } catch (err) {
     return err;

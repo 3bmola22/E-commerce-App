@@ -41,6 +41,8 @@ export default function Login() {
       redirect: false,
       callbaxkUrl: "/",
     });
+
+    // console.log(response);
     if (response?.ok) {
       toast.success(`"👍 welcome "`, {
         position: "top-center",

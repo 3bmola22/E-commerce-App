@@ -49,7 +49,7 @@ export default function AddBtn({
         });
       }
     } catch (err) {
-      console.log("llllllll", err);
+      // console.log("llllllll", err);
       toast.warn("🦄 Login First!", {
         position: "top-center",
         autoClose: 3000,
