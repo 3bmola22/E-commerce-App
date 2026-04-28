@@ -13,7 +13,7 @@ export default function cart() {
         headers: { token: token },
       });
       const data = await res.json();
-      console.log("lalala", data);
+      // console.log("lalala", data);
     } catch (error) {
       return undefined;
     }

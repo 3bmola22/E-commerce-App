@@ -16,13 +16,13 @@ export default function WishBtnDelete({
   //   const { cartcount, setcartcount } = useContext(ContextCart);
 
   async function handleDeleteProduct(id: string) {
-    console.log("trrr", id);
+    // console.log("trrr", id);
     const res = await deleteProductWish({ id });
 
     
     if (res?.status === "success") {
             const data =await getWish()
-console.log("sksk", data);
+// console.log("sksk", data);
       setallProductsWish(data.data);
       setallWish(data);
       toast.success("Product removed successfully to your wishlist", {

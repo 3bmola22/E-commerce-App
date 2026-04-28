@@ -48,7 +48,7 @@ export default function Checkout({
   async function submit(inputsData: CheckoutType) {
     const res = await onlinePayment(id, "", inputsData);
     window.location.href = res.session.url
-    console.log("ddda", res);
+    // console.log("ddda", res);
   }
   return (
     <div className="max-w-6xl flex flex-wrap justify-center m-auto">
