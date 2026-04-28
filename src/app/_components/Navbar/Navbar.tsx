@@ -23,7 +23,7 @@ import { IoCartSharp, IoMenu } from "react-icons/io5";
 import { IoIosHeartEmpty } from "react-icons/io";
 import FirstNav from "../FirstNav/FirstNav";
 
-import { singnOutt, useAuthStatus } from "../ContextProvider/ContextProvider";
+import { handleSignOut, useAuthStatus } from "../ContextProvider/ContextProvider";
 import { ContextCart } from "../ContextProvider/ContextUsrCart";
 
 const categories = [
@@ -131,7 +131,7 @@ export default function Navbar() {
 
             {status === "authenticated" ? (
               <button
-                onClick={singnOutt}
+                onClick={handleSignOut}
                 className="hidden lg:flex bg-green-600 hover:bg-green-700  text-white px-5 py-2 rounded-2xl font-medium text-sm transition"
               >
                 Sign out
