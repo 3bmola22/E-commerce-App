@@ -42,7 +42,7 @@ export default function Login() {
       callbaxkUrl: "/",
     });
 
-    console.log("ssssssssss",response);
+    // console.log("ssssssssss",response);
     if (response?.ok) {
       toast.success(`"👍 welcome "`, {
         position: "top-center",

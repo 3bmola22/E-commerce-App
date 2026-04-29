@@ -35,6 +35,7 @@ export default function WishBtn({
         // setcartcount(cartcount + 1);
       } 
     } catch (err) {
+      console.log("wissssssssssssh", err);
      toast.error("💥 Error!", {
        position: "top-center",
        autoClose: 3000,
