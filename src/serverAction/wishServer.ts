@@ -4,10 +4,11 @@ import { getRealToken } from "@/utilities";
 
 export async function wishProduct(productId: string) {
   const token = await getRealToken();
-  // console.log("decodedToken", token);
+  
   if (!token) {
-    throw new Error("login First");
+    return { status: "fail", message: "Please login first" };
   }
+  
   try {
     const res = await fetch(`https://ecommerce.routemisr.com/api/v1/wishlist`, {
       method: "POST",
@@ -18,11 +19,9 @@ export async function wishProduct(productId: string) {
       },
     });
     const data = await res.json();
-    // console.log("dtdt", data);
-
     return data;
   } catch (err) {
-    return err;
+    return { status: "error", message: String(err) };
   }
 }
 

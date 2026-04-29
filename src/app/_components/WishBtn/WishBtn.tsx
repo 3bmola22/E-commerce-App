@@ -19,7 +19,7 @@ export default function WishBtn({
   async function handleWishProduct(productId: string) {
     try {
       const res = await wishProduct(productId);
-      // console.log("tutu", res);
+      
       if (res.status === "success") {
         toast.success("👌 Done!", {
           position: "top-center",
@@ -32,10 +32,23 @@ export default function WishBtn({
           theme: "light",
           transition: Bounce,
         });
-        // setcartcount(cartcount + 1);
-      } 
+      } else if (res.status === "fail" || res.message?.includes("login")) {
+        toast.error("🔐 Please login first!", {
+          position: "top-center",
+          autoClose: 3000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+          transition: Bounce,
+        });
+      } else {
+        throw new Error(res.message || "Unknown error");
+      }
     } catch (err) {
-      console.log("wissssssssssssh", err);
+      console.log("wish error", err);
      toast.error("💥 Error!", {
        position: "top-center",
        autoClose: 3000,
@@ -46,7 +59,7 @@ export default function WishBtn({
        progress: undefined,
        theme: "light",
        transition: Bounce,
-     });;
+     });
     }
   }
   return (
