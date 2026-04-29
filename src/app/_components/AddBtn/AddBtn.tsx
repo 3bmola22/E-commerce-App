@@ -20,7 +20,7 @@ export default function AddBtn({
 
     try {
       const res = await addProductCartServer(productId);
-      
+      console.log("addddddddd", res);
 
       if (res.status === "success") {
         toast.success("👌 Done!", {
