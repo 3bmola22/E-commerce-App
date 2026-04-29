@@ -186,24 +186,34 @@ export default function Navbar() {
 
                 <hr className="my-4 mx-4" />
 
-                <div className="flex gap-2 px-4">
-                  <Link
-                    href="/login"
-                    className="flex-1 text-center bg-green-600 hover:bg-green-700 
-                               text-white py-2.5 rounded-xl font-medium text-sm transition"
+               {status === "authenticated" ? (
+                  <button
+                    onClick={handleSignOut}
+                    className="mx-4 mt-4 p-3 bg-red-600 hover:bg-red-700 
+                               text-white rounded-xl font-medium text-sm transition"
                   >
-                    Sign in
-                  </Link>
-                  <Link
-                    href="/register"
-                    className="flex-1 text-center border border-green-600 
-                               hover:bg-green-600 hover:text-white
-                               text-green-600 py-2.5 rounded-xl 
-                               font-medium text-sm transition"
-                  >
-                    Register
-                  </Link>
-                </div>
+                    Sign out
+                  </button>
+                ) : (
+                  <div className="flex gap-2 px-4">
+                    <Link
+                      href="/login"
+                      className="flex-1 text-center bg-green-600 hover:bg-green-700 
+                                 text-white py-2.5 rounded-xl font-medium text-sm transition"
+                    >
+                      Sign in
+                    </Link>
+                    <Link
+                      href="/register"
+                      className="flex-1 text-center border border-green-600 
+                                 hover:bg-green-600 hover:text-white
+                                 text-green-600 py-2.5 rounded-xl 
+                                 font-medium text-sm transition"
+                    >
+                      Register
+                    </Link>
+                  </div>
+                )}
 
                 <Link
                   href="/contact"

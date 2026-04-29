@@ -48,7 +48,7 @@ export default function WishBtn({
         throw new Error(res.message || "Unknown error");
       }
     } catch (err) {
-      console.log("wish error", err);
+      // console.log("wish error", err);
      toast.error("💥 Error!", {
        position: "top-center",
        autoClose: 3000,

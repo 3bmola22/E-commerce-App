@@ -16,7 +16,7 @@ export default function UpdateCartQuantity({
     const data = await updateCartQuantity(id, newCount);
     setallCart(data);
     setallProducts(data?.data.products);
-    console.log("up", data);
+    // console.log("up", data);
     if (data?.status === "success") {
       toast.success("Product Updated successfully!", {
         position: "top-center",
